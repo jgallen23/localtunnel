@@ -66,7 +66,7 @@ function socketOnData(d, start, end) {
 
     var ret = parser.execute(d, start, end - start);
     if (ret instanceof Error) {
-        debug('parse error');
+        log('parse error');
         freeParser(parser, req);
         socket.destroy(ret);
     }
@@ -186,7 +186,7 @@ server.on('connection', function(socket) {
 
         // invalid request from the user
         if (ret instanceof Error) {
-            debug('parse error');
+            log('parse error');
             socket.destroy(ret);
             return;
         }
