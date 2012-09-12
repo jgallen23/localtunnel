@@ -2,7 +2,6 @@
 // builtin
 var http = require('http');
 var net = require('net');
-var FreeList = require('freelist').FreeList;
 
 var argv = require('optimist')
     .usage('Usage: $0 --port [num]')
